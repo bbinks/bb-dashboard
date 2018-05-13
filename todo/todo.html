@@ -1,0 +1,57 @@
+<div class="container" ng-controller="TodoCtrl">
+
+	<h1>Your Tasks</h1>
+
+	<div class="row">
+		<div class="col-md-8">
+			<table class="table">
+				<th>Completed</th>
+				<th>Title</th>
+				<th>Action</th>
+				<tr ng-repeat="task in tasks" ng-class="{success: task.completed}">
+						<td class="active">
+						<label class="control control--checkbox">
+							<input type="checkbox" checked="checked" ng-model="task.completed" ng-click="updateStatus(task)"/>
+							<div class="control__indicator"></div>
+						</label>
+					</td>
+						<td class="active"><a href="#">{{task.title}}</a></td>
+						<td class="active">
+							<button type="button" class="btn btn-warning" ng-click="showEditForm(task)">Edit</button>
+						<button type="button" class="btn btn-danger" ng-click="removeTask(task)">Delete</button>
+				  </td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-4">
+			
+			<button type="button" class="btn btn-primary" ng-click="showAddForm()" ng-hide="addFormShow || editFormShow">Add Task</button>
+
+			<form ng-show="addFormShow" ng-submit="addFormSubmit()">
+				<h3>Add Task</h3>
+			  	<div class="form-group">
+				    <label>Title</label>
+			    	<input type="text" ng-model="title"  class="form-control" placeholder="Task Title" required>
+			  	</div>
+			  	<div class="form-group">
+			  		<label>Description</label>
+			  		<textarea ng-model="desc" class="form-control" rows="3" placeholder="Task Description"></textarea>
+			  	</div>
+			  	<button type="submit" class="btn btn-default">Add Task</button>
+			</form>
+
+			<form ng-show="editFormShow" ng-submit="editFormSubmit()">
+				<h3>Edit Task</h3>
+			  	<div class="form-group">
+				    <label>Title</label>
+			    	<input type="text" ng-model="title"  class="form-control" placeholder="Task Title" required>
+			  	</div>
+			  	<div class="form-group">
+			  		<label>Description</label>
+			  		<textarea ng-model="desc" class="form-control" rows="3" placeholder="Task Description"></textarea>
+			  	</div>
+			  	<button type="submit" class="btn btn-default">Edit Task</button>
+			</form>
+		</div>
+	</div>
+</div>

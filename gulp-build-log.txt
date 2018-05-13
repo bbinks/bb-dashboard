@@ -1,0 +1,18 @@
+// gulp-build-log
+// 10/3/17
+//
+ gulp build
+[10:17:36] Using gulpfile C:\Dashboard\j97\gulpfile.js
+[10:17:36] Starting 'images'...
+out: ./build/images/
+[10:17:36] Starting 'js'...
+[10:17:36] gulp-imagemin: Minified 0 images
+[10:17:36] Finished 'images' after 27 ms
+[10:17:36] Starting 'html'...
+[10:17:36] Starting 'css'...
+[10:17:36] Finished 'js' after 28 ms
+[10:17:36] Finished 'html' after 7.17 ms
+[10:17:36] Finished 'css' after 8.15 ms
+[10:17:36] Starting 'build'...
+[10:17:36] Gulp is building app!
+[10:17:36] Finished 'build' after 2.32 ms
