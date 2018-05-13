@@ -1,5 +1,5 @@
 // purpose: gulp-build-scripts
-// author: bbragg
+// author: bbraug
 // date: 10-2-17
 //
 // var builder = require('@jenkins-cd/js-builder');
